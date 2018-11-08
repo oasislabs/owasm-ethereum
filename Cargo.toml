@@ -1,11 +1,11 @@
 [package]
-name = "pwasm-ethereum"
+name = "owasm-ethereum"
 version = "0.7.0"
-authors = ["NikVolf <nikvolf@gmail.com>"]
+authors = ["NikVolf <nikvolf@gmail.com>", "Oasis Labs <info@oasislabs.com"]
 license = "MIT/Apache-2.0"
 readme = "README.md"
-repository = "https://github.com/paritytech/pwasm-ethereum"
-homepage = "https://github.com/paritytech/pwasm-ethereum"
+repository = "https://github.com/oasislabs/owasm-ethereum"
+homepage = "https://github.com/oasislabs/owasm-ethereum"
 documentation = "https://paritytech.github.io/pwasm-ethereum/pwasm_ethereum/"
 description = "Externs library to interact with Ethereum-like network"
 keywords = ["wasm", "parity", "ethereum", "blockchain"]
@@ -18,7 +18,7 @@ parity-hash = { version = "1.2.2", default-features = false }
 pwasm-std = "0.10"
 
 [dependencies.uint]
-version = "0.3"
+version = "0.4"
 default-features = false
 
 [dependencies.byteorder]
