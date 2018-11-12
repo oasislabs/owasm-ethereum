@@ -1,4 +1,4 @@
-//! Storage extensions for pwasm-ethereum.
+//! Storage extensions for owasm-ethereum.
 //! Storage api is a key-value storage where both key and value are 32 bytes in len
 
 use hash::H256;

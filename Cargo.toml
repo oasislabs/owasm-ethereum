@@ -15,7 +15,8 @@ categories = ["no-std", "embedded"]
 parity-hash = { version = "1.2.2", default-features = false }
 
 [dependencies]
-owasm-std = "0.12"
+#owasm-std = "0.12"
+owasm-std = { git = "https://github.com/oasislabs/owasm-std", branch = "0.10.0" }
 
 [dependencies.uint]
 version = "0.4"
