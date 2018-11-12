@@ -6,9 +6,9 @@ license = "MIT/Apache-2.0"
 readme = "README.md"
 repository = "https://github.com/oasislabs/owasm-ethereum"
 homepage = "https://github.com/oasislabs/owasm-ethereum"
-documentation = "https://paritytech.github.io/pwasm-ethereum/pwasm_ethereum/"
+documentation = "https://docs.rs/crate/owasm-ethereum"
 description = "Externs library to interact with Ethereum-like network"
-keywords = ["wasm", "parity", "ethereum", "blockchain"]
+keywords = ["wasm", "oasis", "oasislabs", "parity", "ethereum", "blockchain"]
 categories = ["no-std", "embedded"]
 
 [build-dependencies]
