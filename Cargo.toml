@@ -8,7 +8,7 @@ repository = "https://github.com/oasislabs/owasm-ethereum"
 homepage = "https://github.com/oasislabs/owasm-ethereum"
 documentation = "https://docs.rs/crate/owasm-ethereum"
 description = "Externs library to interact with Ethereum-like network"
-keywords = ["wasm", "oasis", "oasislabs", "parity", "ethereum", "blockchain"]
+keywords = ["wasm", "oasis", "ethereum", "blockchain"]
 categories = ["no-std", "embedded"]
 
 [build-dependencies]
