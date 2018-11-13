@@ -2,7 +2,7 @@
 
 use hash::{H256, Address};
 use uint::U256;
-use pwasm_std;
+use owasm_std;
 
 /// Generic wasm error
 #[derive(Debug)]
@@ -302,13 +302,13 @@ pub fn log(topics: &[H256], data: &[u8]) {
 /// Allocates and requests [`call`] arguments (input)
 ///
 /// Input data comes either with external transaction or from [`call`] input value.
-pub fn input() -> pwasm_std::Vec<u8> {
+pub fn input() -> owasm_std::Vec<u8> {
 	let len = unsafe { external::input_length() };
 
 	match len {
-		0 => pwasm_std::Vec::new(),
+		0 => owasm_std::Vec::new(),
 		non_zero => {
-			let mut data = pwasm_std::Vec::with_capacity(non_zero as usize);
+			let mut data = owasm_std::Vec::with_capacity(non_zero as usize);
 			unsafe {
 				data.set_len(non_zero as usize);
 				external::fetch_input(data.as_mut_ptr());
