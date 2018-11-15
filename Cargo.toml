@@ -1,6 +1,6 @@
 [package]
 name = "owasm-ethereum"
-version = "0.7.1"
+version = "0.7.2"
 authors = ["NikVolf <nikvolf@gmail.com>", "Oasis Labs <info@oasislabs.com>"]
 license = "MIT/Apache-2.0"
 readme = "README.md"
@@ -15,7 +15,7 @@ categories = ["no-std", "embedded"]
 parity-hash = { version = "1.2.2", default-features = false }
 
 [dependencies]
-owasm-std = "0.10"
+owasm-std = "0.13"
 
 [dependencies.uint]
 version = "0.4"
