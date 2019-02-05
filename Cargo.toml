@@ -10,13 +10,12 @@ documentation = "https://docs.rs/crate/owasm-ethereum"
 description = "Externs library to interact with Ethereum-like network"
 keywords = ["wasm", "oasis", "ethereum", "blockchain"]
 categories = ["no-std", "embedded"]
+edition = "2018"
 
 [dependencies]
-pwasm-std = "0.13"
-byteorder = { version = "1", default-features = false }
+oasis = { git = "https://github.com/oasislabs/oasis-rs" }
 
 [features]
 default = []
 kip4 = []
 kip6 = []
-std = ["pwasm-std/std", "byteorder/std"]
