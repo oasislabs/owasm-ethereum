@@ -107,7 +107,7 @@ mod external {
         // Key must be 32 bytes.
 		pub fn get_bytes(key: *const u8, result: *mut u8);
         // Key must be 32 bytes.
-        pub fn get_bytes_len(key: *const u8) -> i32;
+        pub fn get_bytes_len(key: *const u8) -> u64;
         // Key must be 32 bytes.
 		pub fn set_bytes(key: *const u8, bytes: *const u8, bytes_len: u64);
 	}
