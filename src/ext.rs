@@ -103,7 +103,36 @@ mod external {
 		pub fn input_length() -> u32;
 
 		pub fn fetch_input(dst: *mut u8);
+
+		// Key must be 32 bytes.
+		pub fn get_bytes(key: *const u8, result: *mut u8);
+		// Key must be 32 bytes.
+		pub fn get_bytes_len(key: *const u8) -> u64;
+		// Key must be 32 bytes.
+		pub fn set_bytes(key: *const u8, bytes: *const u8, bytes_len: u64);
 	}
+}
+
+/// Retrieve data directly from the contract storage trie.
+pub fn get_bytes(key: &H256) -> Result<owasm_std::Vec<u8>, Error> {
+	let result_len = get_bytes_len(key)?;
+	let mut result: owasm_std::Vec<u8> = owasm_std::Vec::with_capacity(result_len as usize);
+	result.resize(result_len as usize, 0u8);
+	unsafe { external::get_bytes(key.as_ptr(), result.as_mut_ptr()); }
+	Ok(result)
+}
+
+fn get_bytes_len(key: &H256) -> Result<u32, Error> {
+	unsafe {
+		Ok(external::get_bytes_len(key.as_ptr()) as u32)
+	}
+}
+
+/// Store data directly into the contract storage trie.
+pub fn set_bytes(key: &H256, bytes: &[u8]) -> Result<(), Error> {
+	let len = bytes.len() as u64;
+	unsafe { external::set_bytes(key.as_ptr(), bytes.as_ptr(), len); }
+	Ok(())
 }
 
 /// Halt execution and register account for deletion
