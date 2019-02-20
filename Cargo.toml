@@ -1,6 +1,6 @@
 [package]
 name = "owasm-ethereum"
-version = "0.7.3"
+version = "0.8.0"
 authors = ["NikVolf <nikvolf@gmail.com>", "Oasis Labs <info@oasislabs.com>"]
 license = "MIT/Apache-2.0"
 readme = "README.md"
