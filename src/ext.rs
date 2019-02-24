@@ -1,6 +1,6 @@
 //! Safe wrapper around externalities invokes.
 
-use oasis::prelude::*;
+use owasm_std::prelude::*;
 
 /// Generic wasm error
 #[derive(Debug)]

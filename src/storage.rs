@@ -1,7 +1,7 @@
 //! Storage extensions for pwasm-ethereum.
 //! Storage api is a key-value storage where both key and value are 32 bytes in len
 
-use oasis::prelude::*;
+use owasm_std::prelude::*;
 
 extern "C" {
 	fn storage_read(key: *const u8, dst: *mut u8);

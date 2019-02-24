@@ -9,11 +9,11 @@ homepage = "https://github.com/oasislabs/owasm-ethereum"
 documentation = "https://docs.rs/crate/owasm-ethereum"
 description = "Externs library to interact with Ethereum-like network"
 keywords = ["wasm", "oasis", "ethereum", "blockchain"]
-categories = ["no-std", "embedded"]
+categories = ["embedded"]
 edition = "2018"
 
 [dependencies]
-oasis-std = "0.1"
+owasm-std = "0.20"
 
 [features]
 default = []
